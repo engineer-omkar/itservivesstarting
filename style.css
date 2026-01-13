@@ -63,6 +63,33 @@ nav a {
     overflow: hidden;
 }
 @media (max-width: 768px) {
+    .hero {
+    position: relative;
+    height: 100vh;
+
+    /* LEFT → RIGHT GRADIENT */
+    background: linear-gradient(
+        90deg,
+        #061E29,
+        #1D546D,
+        #5F9598
+    );
+
+    background-size: 300% 300%;
+    animation: gradientMove 10s ease infinite;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+    padding: 20px;
+    overflow: hidden;
+}
+}
+@media (max-width: 768px) {
     .nav-container {
         padding: 15px 20px;
     }
@@ -406,4 +433,5 @@ nav a {
         font-size: 16px;
         line-height: 1.8;
     }
+
 }
