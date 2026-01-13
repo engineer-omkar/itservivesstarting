@@ -65,7 +65,7 @@ nav a {
 @media (max-width: 768px) {
     .hero {
     position: relative;
-    height: 100vh;
+    height: 70vh;
 
     /* LEFT → RIGHT GRADIENT */
     background: linear-gradient(
@@ -435,4 +435,5 @@ nav a {
     }
 
 }
+
 
