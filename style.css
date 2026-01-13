@@ -1,0 +1,359 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body { line-height: 1.6; }
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background: transparent;   /* IMPORTANT */
+}
+
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+
+    /* LEFT → RIGHT GRADIENT */
+    background: linear-gradient(
+        90deg,
+        #061E29,
+        #1D546D,
+        #5F9598
+    );
+
+    background-size: 300% 300%;
+    animation: gradientMove 10s ease infinite;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* SMOOTH GRADIENT ANIMATION */
+@keyframes gradientMove {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* HERO TEXT */
+.hero h2 {
+    font-size: 38px;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-top: 15px;
+    opacity: 0.95;
+}
+
+/* WAVE SHAPE */
+.hero::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+
+    background: #ffffff;
+
+    clip-path: polygon(
+        0% 40%,
+        15% 55%,
+        30% 45%,
+        45% 60%,
+        60% 50%,
+        75% 65%,
+        90% 55%,
+        100% 60%,
+        100% 100%,
+        0% 100%
+    );
+}
+
+
+
+.services, .packages, .about, .contact {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.service-box {
+    margin: 15px auto;
+    max-width: 600px;
+}
+
+.package-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+
+.package-box {
+    background: white;
+    width: 300px;
+    margin: 15px;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.package-box:hover {
+    transform: translateY(-10px);
+}
+
+.featured {
+    border: 2px solid #0a2540;
+}
+
+.price {
+    font-size: 24px;
+    color: #0a2540;
+    margin: 10px 0;
+}
+
+.package-box ul {
+    list-style: none;
+    padding: 10px 0;
+}
+
+.package-box li {
+    padding: 5px 0;
+}
+
+.btn {
+    display: inline-block;
+    background: #5F9598;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+@media (max-width: 768px) {
+    .package-container {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        justify-content: flex-start;
+        padding: 10px;
+    }
+
+    .package-box {
+        min-width: 85%;
+        flex: 0 0 auto;
+        scroll-snap-align: center;
+    }
+
+    /* Hide scrollbar */
+    .package-container::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+/* CONTACT SECTION – MINIMAL TRANSPARENT STYLE */
+.contact {
+    background: transparent;
+    padding: 80px 20px;
+}
+/* Line below Contact Us heading */
+.contact-line {
+    width: 80px;
+    height: 3px;
+    background: #5F9598;
+    margin: 15px auto 40px;
+    border-radius: 2px;
+}
+
+.contact h2 {
+    margin-bottom: 40px;
+    color: #0a2540;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(10, 37, 64, 0.4);
+    padding: 12px 5px;
+    margin-bottom: 25px;
+    font-size: 15px;
+    color: #0a2540;
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 100px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(10, 37, 64, 0.6);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-bottom-color: #5F9598;
+}
+
+/* SUBMIT BUTTON */
+.contact-form button {
+    width: 100%;
+    background: transparent;
+    border: 2px solid #5F9598;
+    color: #5F9598;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #5F9598;
+    color: white;
+}
+
+
+.footer {
+    background: #061E29;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-content h3 {
+    margin-bottom: 15px;
+}
+
+.footer-content p {
+    margin: 6px 0;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.social-links {
+    margin: 15px 0;
+}
+
+.social-links a {
+    color: #5F9598;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        background: #0a2540;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+    }
+
+    nav a {
+        padding: 10px;
+        border-top: 1px solid #fff;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+.services {
+    padding: 70px 20px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.services h2 {
+    margin-bottom: 40px;
+    color: #0a2540;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.service-card {
+    background: #f9fafc;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card h3 {
+    margin-bottom: 15px;
+    color: #0a2540;
+}
+
+.service-card p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.7;
+    max-width: 90%;
+    margin: auto;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}

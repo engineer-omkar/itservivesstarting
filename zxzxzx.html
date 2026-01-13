@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Company Name | Professional IT Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="nav-container">
+        <h1 class="logo">YourCompany</h1>
+        <nav id="nav">
+            <a href="#services">Services</a>
+            <a href="#packages">Packages</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </div>
+</header>
+
+
+<!-- ABOUT -->
+<section id="about" class="about">
+    <h2>About Us</h2>
+    <p>
+        We are a professional IT service company delivering reliable, scalable,
+        and secure web solutions.<br> Our mission is to help businesses grow online
+        with technology-driven solutions and long-term support.
+    </p>
+</section>
+
+
+
+
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-line"></div>
+    <form class="contact-form" onsubmit="sendMessage(event)">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <input type="tel" placeholder="Phone Number" required>
+
+        
+
+        <input type="text" placeholder="Required Services">
+        <input type="text" placeholder="Selected Plan (Classic / Diamond / Premium)">
+        <textarea placeholder="Your Requirement" required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+
+<footer class="footer">
+    <div class="footer-content">
+        <h3>Your Company Name</h3>
+
+        <p>Email: info@yourcompany.com</p>
+        <p>Phone: +91 98765 43210</p>
+        <p>Address: Your Office Address, City, Country</p>
+
+        <div class="social-links">
+            <a href="#">LinkedIn</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+
+        <p class="copyright">
+            © 2026 Your Company Name. All Rights Reserved.
+        </p>
+    </div>
+</footer>
+
+
+<script src="website.js"></script>
+</body>
+</html>
