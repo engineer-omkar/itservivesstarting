@@ -1,7 +1,8 @@
 function toggleMenu() {
     const nav = document.getElementById("nav");
-    nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+    nav.classList.toggle("active");
 }
+
 
 function sendMessage(e) {
     e.preventDefault();

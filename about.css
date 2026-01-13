@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+}
+
+.logo {
+    color: white;
+}
+
+/* NAV */
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+nav a.active {
+    border-bottom: 2px solid #5F9598;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+}
+
+/* HERO */
+.about-hero {
+    height: 100vh;
+    background: linear-gradient(90deg, #061E29, #1D546D, #5F9598);
+    background-size: 300% 300%;
+    animation: gradientMove 10s ease infinite;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.about-hero h2 {
+    font-size: 42px;
+}
+
+.about-hero p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* SECTIONS */
+.about-section,
+.what-we-do,
+.impact-section,
+.cta {
+    padding: 90px 20px;
+    text-align: center;
+}
+
+.about-section p {
+    max-width: 800px;
+    margin: auto;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* WHAT WE DO */
+.what-we-do {
+    background: #f9fafc;
+}
+
+.work-grid {
+    max-width: 1000px;
+    margin: 40px auto 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.work-card {
+    padding: 30px;
+    border-radius: 12px;
+    background: white;
+    border: 2px solid rgba(95,149,152,0.35);
+}
+
+/* IMPACT */
+.impact-grid {
+    max-width: 1000px;
+    margin: 40px auto 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.impact-card {
+    padding: 40px;
+    border-radius: 16px;
+    background: #f9fafc;
+    border: 2px solid rgba(95,149,152,0.35);
+}
+
+.impact-card span {
+    font-size: 42px;
+    color: #5F9598;
+    font-weight: bold;
+}
+
+/* CTA */
+.cta {
+    background: linear-gradient(90deg, #061E29, #1D546D, #5F9598);
+    color: white;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #5F9598;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+/* FOOTER */
+.footer {
+    background: #061E29;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* MOBILE MENU */
+@media (max-width: 768px) {
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 75%;
+        height: 100vh;
+        background: linear-gradient(180deg, #061E29, #1D546D, #5F9598);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        transition: 0.4s ease;
+    }
+
+    nav.active {
+        right: 0;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
