@@ -109,26 +109,51 @@ nav a.active {
 }
 
 /* IMPACT */
+/* IMPACT SECTION */
+.impact-section {
+    padding: 90px 20px;
+    text-align: center;
+}
+
 .impact-grid {
     max-width: 1000px;
-    margin: 40px auto 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
+    margin: 50px auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+/* REMOVE BOX STYLE */
 .impact-card {
-    padding: 40px;
-    border-radius: 16px;
-    background: #f9fafc;
-    border: 2px solid rgba(95,149,152,0.35);
+    flex: 1;
+    padding: 20px;
+    position: relative;
 }
 
+/* COUNTER NUMBER */
 .impact-card span {
     font-size: 42px;
     color: #5F9598;
     font-weight: bold;
 }
+
+/* LABEL */
+.impact-card p {
+    margin-top: 8px;
+    color: #555;
+}
+
+/* VERTICAL LINE BETWEEN ITEMS */
+.impact-card:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 20%;
+    height: 60%;
+    width: 1px;
+    background: rgba(95,149,152,0.4);
+}
+
 
 /* CTA */
 .cta {
