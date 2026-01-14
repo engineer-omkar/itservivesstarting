@@ -116,42 +116,60 @@ nav a.active {
 }
 
 .impact-grid {
-    max-width: 1000px;
-    margin: 50px auto 0;
+    max-width: 1100px;
+    margin: 40px auto 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
+
 
 /* REMOVE BOX STYLE */
 .impact-card {
-    flex: 1;
-    padding: 20px;
+    flex: 1 1 0;
+    min-width: 0; /* VERY IMPORTANT */
+    padding: 8px 4px;
+    text-align: center;
     position: relative;
 }
 
 /* COUNTER NUMBER */
 .impact-card span {
-    font-size: 42px;
+    font-size: clamp(20px, 4vw, 42px);
     color: #5F9598;
     font-weight: bold;
 }
 
-/* LABEL */
 .impact-card p {
-    margin-top: 8px;
+    font-size: clamp(10px, 2.5vw, 14px);
+    margin-top: 4px;
     color: #555;
 }
 
+
 /* VERTICAL LINE BETWEEN ITEMS */
-.impact-card:not(:last-child)::after {
+.impact-card:.impact-card:not(:last-child)::after {
     content: "";
     position: absolute;
     right: 0;
-    top: 20%;
-    height: 60%;
+    top: 25%;
+    height: 50%;
     width: 1px;
-    background: rgba(95,149,152,0.4);
+    background: rgba(95,149,152,0.35);
+}
+@media (max-width: 360px) {
+    .impact-card {
+        padding: 6px 2px;
+    }
+
+    .impact-card span {
+        font-size: 18px;
+    }
+
+    .impact-card p {
+        font-size: 10px;
+    }
 }
 
 
@@ -203,4 +221,5 @@ nav a.active {
     .menu-icon {
         display: block;
     }
+
 }
