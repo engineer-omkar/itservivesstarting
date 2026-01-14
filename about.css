@@ -128,15 +128,15 @@ nav a.active {
 /* REMOVE BOX STYLE */
 .impact-card {
     flex: 1 1 0;
-    min-width: 0; /* VERY IMPORTANT */
-    padding: 8px 4px;
+    min-width: 0;
+    padding: 8px 6px;
     text-align: center;
     position: relative;
 }
 
 /* COUNTER NUMBER */
 .impact-card span {
-    font-size: clamp(20px, 4vw, 42px);
+    font-size: clamp(18px, 4vw, 42px);
     color: #5F9598;
     font-weight: bold;
 }
@@ -148,25 +148,20 @@ nav a.active {
 }
 
 
+
 /* VERTICAL LINE BETWEEN ITEMS */
 .impact-card:not(:last-child)::after {
     content: "";
     position: absolute;
     right: 0;
-    top: 20%;
-    height: 60%;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 40px;              /* FIXED HEIGHT */
     width: 1px;
-    background: rgba(95,149,152,0.4);
+    background-color: #5F9598;
+    opacity: 0.4;
 }
-.impact-card:.impact-card:not(:last-child)::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 25%;
-    height: 50%;
-    width: 1px;
-    background: rgba(95,149,152,0.35);
-}
+
 @media (max-width: 360px) {
     .impact-card {
         padding: 6px 2px;
@@ -180,7 +175,11 @@ nav a.active {
         font-size: 10px;
     }
 }
-
+@media (max-width: 360px) {
+    .impact-card:not(:last-child)::after {
+        height: 32px;
+    }
+}
 
 /* CTA */
 .cta {
@@ -232,3 +231,4 @@ nav a.active {
     }
 
 }
+
