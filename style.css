@@ -120,7 +120,16 @@ white-space: nowrap;        /* FORCE one line */
     overflow: hidden;
     text-overflow: ellipsis;    /* Safety for very small screens */
 }
-
+@media (max-width: 768px) {
+    .hero p {
+    font-size: 6px;
+    margin-top: 15px;
+    opacity: 0.95;
+white-space: nowrap;        /* FORCE one line */
+    overflow: hidden;
+    text-overflow: ellipsis;    /* Safety for very small screens */
+}
+}
 /* WAVE SHAPE */
 .hero::after {
     content: "";
@@ -439,4 +448,5 @@ white-space: nowrap;        /* FORCE one line */
         font-size: 16px;
         line-height: 1.8;
     }
+
 }
