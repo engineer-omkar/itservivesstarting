@@ -73,7 +73,7 @@ nav a.active {
 }
 @media (max-width: 360px) {
     .about-hero {
-    height: 65vh;
+    height: 60vh;
     background: linear-gradient(90deg, #061E29, #1D546D, #5F9598);
     background-size: 300% 300%;
     animation: gradientMove 10s ease infinite;
@@ -261,6 +261,7 @@ nav a.active {
     }
 
 }
+
 
 
 
