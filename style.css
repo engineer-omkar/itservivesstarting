@@ -30,6 +30,9 @@ nav a {
     margin: 0 15px;
     text-decoration: none;
 }
+nav a.active {
+    border-bottom: 2px solid #5F9598;
+}
 
 .menu-icon {
     display: none;
@@ -63,6 +66,11 @@ nav a {
     overflow: hidden;
 }
 @media (max-width: 768px) {
+    .nav-container {
+        padding: 15px 20px;
+    }
+}
+@media (max-width: 768px) {
     .hero {
     position: relative;
     height: 70vh;
@@ -89,11 +97,6 @@ nav a {
     overflow: hidden;
 }
 }
-@media (max-width: 768px) {
-    .nav-container {
-        padding: 15px 20px;
-    }
-}
 
 
 /* SMOOTH GRADIENT ANIMATION */
@@ -113,6 +116,9 @@ nav a {
     font-size: 18px;
     margin-top: 15px;
     opacity: 0.95;
+white-space: nowrap;        /* FORCE one line */
+    overflow: hidden;
+    text-overflow: ellipsis;    /* Safety for very small screens */
 }
 
 /* WAVE SHAPE */
@@ -433,7 +439,4 @@ nav a {
         font-size: 16px;
         line-height: 1.8;
     }
-
 }
-
-
