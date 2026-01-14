@@ -149,6 +149,15 @@ nav a.active {
 
 
 /* VERTICAL LINE BETWEEN ITEMS */
+.impact-card:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 20%;
+    height: 60%;
+    width: 1px;
+    background: rgba(95,149,152,0.4);
+}
 .impact-card:.impact-card:not(:last-child)::after {
     content: "";
     position: absolute;
