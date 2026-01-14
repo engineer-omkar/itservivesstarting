@@ -198,16 +198,16 @@ nav a.active {
     }
 
     .impact-card span {
-        font-size: 18px;
+        font-size: 25px;
     }
 
     .impact-card p {
-        font-size: 10px;
+        font-size: 12px;
     }
 }
 @media (max-width: 360px) {
     .impact-card:not(:last-child)::after {
-        height: 32px;
+        height: 35px;
     }
 }
 
@@ -261,6 +261,7 @@ nav a.active {
     }
 
 }
+
 
 
 
