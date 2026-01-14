@@ -71,6 +71,36 @@ nav a.active {
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
+@media (max-width: 360px) {
+    .about-hero {
+    height: 65vh;
+    background: linear-gradient(90deg, #061E29, #1D546D, #5F9598);
+    background-size: 300% 300%;
+    animation: gradientMove 10s ease infinite;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.about-hero h2 {
+    font-size: 42px;
+}
+
+.about-hero p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+}
 
 /* SECTIONS */
 .about-section,
@@ -231,4 +261,5 @@ nav a.active {
     }
 
 }
+
 
